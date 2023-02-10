@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Dosis';
+}
+
+/********************************************** COLOR **********************************************/
+:root {
+  --primary-color: #e3712d;
+  --bg-color: #fae9d7;
+  --font-or-btn-color: #f18f1b;
+  --month-gender-gene-color: #c7c7c7;
+
+  --status-already-color: #fd6e6e;
+  --status-notyet-color: #42d463;
+}
+
+/********************************************** ICON **********************************************/
+
+#ic_pet_adopt {
+  width: 160px;
+  height: 160px;
+  background-color: black;
+  mask: url(../assets/icons/pet-adopt.svg) no-repeat center/contain;
+  -webkit-mask: url(../assets/icons/pet-adopt.svg) no-repeat center/contain;
+}
+
+#ic_dog_cat {
+  width: 160px;
+  height: 160px;
+  background-color: black;
+  mask: url(../assets/icons/dog-cat.svg) no-repeat center/contain;
+  -webkit-mask: url(../assets/icons/dog-cat.svg) no-repeat center/contain;
+}
+
+#ic_search {
+  width: 19px;
+  height: 19px;
+  background-color: black;
+  mask: url(../assets/icons/search.svg) no-repeat center/contain;
+  -webkit-mask: url(../assets/icons/search.svg) no-repeat center/contain;
+}
+
+#ic_big_paw {
+  width: 197px;
+  height: 171px;
+  background-color: black;
+  mask: url(../assets/icons/big-paw.svg) no-repeat center/contain;
+  -webkit-mask: url(../assets/icons/big-paw.svg) no-repeat center/contain;
+}
+
+#ic_paw {
+  width: 9px;
+  height: 8px;
+  background-color: black;
+  mask: url(../assets/icons/paw.svg) no-repeat center/contain;
+  -webkit-mask: url(../assets/icons/paw.svg) no-repeat center/contain;
+}
+
+#ic_down {
+  width: 8px;
+  height: 6px;
+  background-color: black;
+  mask: url(../assets/icons/down.svg) no-repeat center/contain;
+  -webkit-mask: url(../assets/icons/down.svg) no-repeat center/contain;
+}
+
+#ic_bookmark {
+  width: 11px;
+  height: 17px;
+  background-color: black;
+  mask: url(../assets/icons/bookmark.svg) no-repeat center/contain;
+  -webkit-mask: url(../assets/icons/bookmark.svg) no-repeat center/contain;
+}
+
