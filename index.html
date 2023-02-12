@@ -16,34 +16,34 @@
 
         <div class="mid">
           <ul class="menu">
-            <li>
+            <li class="item">
               <a href="/">
                 <p>home</p>
-                <span id="ic_paw"></span>
+                <p id="ic_paw"></p>
               </a>
             </li>
-            <li>
-              <a href="/adopt">
+            <li class="item">
+              <a href="#">
                 <p>adopt</p>
-                <span id="ic_paw"></span>
+                <p id="ic_paw"></p>
               </a>
-            </li>
-            <li>
-              <a href="/lost_pets">
+            </li class="item">
+            <li class="item">
+              <a href="#">
                 <p>lost pets</p>
-                <span id="ic_paw"></span>
+                <p id="ic_paw"></p>
               </a>
             </li>
-            <li class="active">
-              <a href="/bookmark">
+            <li class="item active">
+              <a href="#">
                 <p>bookmark</p>
-                <span id="ic_paw"></span>
+                <p class="active" id="ic_paw"></p>
               </a>
             </li>
-            <li>
-              <a href="/contact">
+            <li class="item">
+              <a href="#">
                 <p>contact</p>
-                <span id="ic_paw"></span>
+                <p id="ic_paw"></p>
               </a>
             </li>
           </ul>
@@ -99,5 +99,19 @@
         </div>
       </section>
     </div>
+    <script>
+      const paw = document.querySelector('#ic_paw.active');
+      const menu = document.querySelectorAll('.item');
+
+      menu.forEach((item) => {
+        item.addEventListener('mouseover', (e) =>{
+          console.log('hover')
+        })
+        item.addEventListener('mouseout', (e) =>{
+          console.log('unhover')
+        })
+
+      })
+    </script>
   </body>
 </html>
