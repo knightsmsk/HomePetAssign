@@ -20,6 +20,14 @@
 
 /********************************************** ICON **********************************************/
 
+#ic_all {
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  mask: url(../assets/icons/all.svg) no-repeat center/contain;
+  -webkit-mask: url(../assets/icons/all.svg) no-repeat center/contain;
+}
+
 #ic_pet_adopt {
   width: 160px;
   height: 160px;
@@ -75,4 +83,3 @@
   mask: url(../assets/icons/bookmark.svg) no-repeat center/contain;
   -webkit-mask: url(../assets/icons/bookmark.svg) no-repeat center/contain;
 }
-
