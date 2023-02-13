@@ -50,8 +50,8 @@
         </div>
 
         <div class="right">
-          <a href="#">Sign in</a>
-          <a href="#">Create account</a>
+          <a href="#" class="sign-in">Sign in</a>
+          <a href="#" class="sign-up">Create account</a>
         </div>
       </nav>
       <section>
@@ -60,6 +60,7 @@
         <div class="title">
           <span id="ic_paw"></span>
           <h2>Your bookmarks</h2>
+          <span id="ic_paw"></span>
         </div>
 
         <div class="search">
@@ -99,16 +100,20 @@
         </div>
       </section>
     </div>
+
     <script>
       const paw = document.querySelector('#ic_paw.active');
       const menu = document.querySelectorAll('.item');
 
       menu.forEach((item) => {
         item.addEventListener('mouseover', (e) =>{
-          console.log('hover')
+          paw.classList.remove('active');
+          e.currentTarget.children[0].children[1].classList.add('active');
         })
         item.addEventListener('mouseout', (e) =>{
-          console.log('unhover')
+          paw.classList.add('active');
+          e.currentTarget.children[0].children[1].classList.remove('active');
+
         })
 
       })
