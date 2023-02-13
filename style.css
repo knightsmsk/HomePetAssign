@@ -10,19 +10,22 @@
 /********************************************** COLOR **********************************************/
 :root {
   --primary-color: #e3712d;
-  --bg-color: #fae9d7;
+  --bg-color: #fff3e5;
   --font-or-btn-color: #f18f1b;
+  --dropdown-ic-color: #f38543;
   --month-gender-gene-color: #c7c7c7;
 
-  --status-already-color: #fd6e6e;
+  --placeholder-color: #e99461;
+
+  --status-adopted-color: #fd6e6e;
   --status-notyet-color: #42d463;
 }
 
 /********************************************** ICON **********************************************/
 
 #ic_all {
-  width: 36px;
-  height: 36px;
+  width: 23px;
+  height: 14px;
   background-color: white;
   mask: url(../assets/icons/all.svg) no-repeat center/contain;
   -webkit-mask: url(../assets/icons/all.svg) no-repeat center/contain;
@@ -45,8 +48,8 @@
 }
 
 #ic_search {
-  width: 19px;
-  height: 19px;
+  width: 24px;
+  height: 20px;
   background-color: black;
   mask: url(../assets/icons/search.svg) no-repeat center/contain;
   -webkit-mask: url(../assets/icons/search.svg) no-repeat center/contain;
@@ -69,19 +72,27 @@
 }
 
 #ic_down {
-  width: 8px;
-  height: 6px;
+  width: 12px;
+  height: 12px;
   background-color: black;
   mask: url(../assets/icons/down.svg) no-repeat center/contain;
   -webkit-mask: url(../assets/icons/down.svg) no-repeat center/contain;
 }
 
 #ic_bookmark {
-  width: 11px;
-  height: 17px;
+  width: 12px;
+  height: 18px;
   background-color: black;
   mask: url(../assets/icons/bookmark.svg) no-repeat center/contain;
   -webkit-mask: url(../assets/icons/bookmark.svg) no-repeat center/contain;
+}
+
+#ic_clear {
+  width: 25px;
+  height: 24px;
+  background-color: var(--primary-color);
+  mask: url(../assets/icons/clear.svg) no-repeat center/contain;
+  -webkit-mask: url(../assets/icons/clear.svg) no-repeat center/contain;
 }
 
 /********************************************** NAVBAR **********************************************/
@@ -172,7 +183,229 @@
   transition: 0.2s ease-in;
 }
 
-section #ic_big_paw {
+section.content {
+  padding: 2.5rem;
+}
+
+section.content #ic_big_paw {
   position: absolute;
+  display: none;
+}
+
+section.content .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+section.content .title #ic_paw {
+  width: 2rem;
+  height: 1.5rem;
+  background-color: var(--font-or-btn-color);
+}
+
+section.content .title #ic_paw:first-child {
+  transform: rotate(-90deg);
+}
+
+section.content .title #ic_paw:last-child {
+  transform: rotate(90deg);
+}
+
+section.content .title span,
+.title h2 {
+  display: inline-block;
+  color: var(--primary-color);
+}
+
+section.content .search-field {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+
+section.content .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 430px;
+  height: 45px;
+  width: 100%;
+  border: 1px solid var(--primary-color);
+  border-radius: 99px;
+  transition: 0.3s ease;
+}
+section.content .search:focus-within,
+section.content .search:hover {
+  background-color: var(--bg-color);
+  transition: 0.3s ease;
+}
+
+section.content .search .filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 1rem;
+  margin: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+section.content .search .filter .all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+section.content .search .filter #ic_down {
+  background-color: var(--dropdown-ic-color);
+}
+
+section.content .search .filter.active #ic_down {
+  transform: rotate(180deg);
+  transition: 0.5s ease;
+}
+
+section.content .search .filter .line {
+  width: 1px;
+  height: 25px;
+  background-color: var(--dropdown-ic-color);
+}
+
+section.content .search .input-field {
+  width: 100%;
+  margin-right: 0.5rem;
+}
+
+section.content .search .input-field input {
+  height: 25px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--primary-color);
+}
+
+section.content .search .input-field input::placeholder {
+  color: var(--primary-color);
+}
+
+section.content .search .input_field input:not(:placeholder-shown) ~ #ic_clear {
+  opacity: 1;
+  transition: 0.2s ease;
+}
+section.content .search #ic_clear {
   opacity: 0;
+  margin-right: 0.5rem;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+section.content .search #ic_search {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  margin-right: 1rem;
+}
+
+section.content .container-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.container-grid .card {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  max-width: 262.52px;
+  max-height: 318px;
+  width: 100%;
+  padding: 13px 11px;
+  border-radius: 18px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.09);
+}
+
+.container-grid .card .img {
+  position: relative;
+}
+
+.container-grid .card .img .container-bookmark {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.container-grid .card .img .container-bookmark .bookmark {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.container-grid .card .img .container-bookmark .bookmark .bg-bookmark {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.container-grid .card .img .container-bookmark #ic_bookmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.container-grid .card .img img {
+  width: 100%;
+  object-fit: cover;
+  height: 185.52px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.container-grid .card .info_status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-grid .card .info_status .info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--month-gender-gene-color);
+}
+
+.container-grid .card .info_status .info span:not([class='line']) {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.container-grid .card .info_status .info .line {
+  display: inline-block;
+  border-radius: 0.063rem;
+  width: 0.125rem;
+  height: 0.875rem;
+  background-color: var(--month-gender-gene-color);
+}
+
+.container-grid .card .info_status .status {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.865rem;
+  color: var(--status-adopted-color);
+}
+
+.container-grid .card .name_gene {
+  display: flex;
 }
