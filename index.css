@@ -22,6 +22,7 @@ nav {
     font-weight: 800;
     letter-spacing: 0.1em;
     user-select: none;
+    color: #EA580C;
 }
 
 .nav-menu {
@@ -34,7 +35,7 @@ nav {
 }
 
 .nav-menu-list:hover {
-    color: #4B5563;
+    color: #EA580C;
 }
 
 .nav-btn-group {
@@ -53,6 +54,29 @@ nav {
     border-radius: 0.375rem;
 }
 
+.nav-hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-btn-group {
+        display: none;
+    }
+
+    .nav-hamburger {
+        display: block;
+    }
+
+    .nav-hamburger img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
 /* END OF NAVBAR */
 
 /* HERO */
@@ -65,6 +89,12 @@ nav {
     padding-right: 10rem;
     justify-content: space-between;
     align-items: center;
+}
+
+.hero img {
+    max-width: 476px;
+    max-height: 346px;
+    width: 100%;
 }
 
 .hero-text-container {
@@ -81,7 +111,6 @@ nav {
 
 .hero-text h1 {
     font-size: 3rem;
-    line-height: 1;
     font-weight: 700;
     line-height: 1.375;
 }
@@ -112,6 +141,35 @@ nav {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .hero img {
+        display: none;
+    }
+
+    .hero-text-container {
+        gap: 1rem;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-btn-group {
+        gap: 1rem;
+        justify-content: center;
+    }
+
 }
 
 /* END OF HERO */
@@ -166,7 +224,8 @@ nav {
     display: grid;
     justify-items: center;
     width: 100%;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+    gap: 1rem;
 }
 
 .adopt-card {
@@ -232,6 +291,23 @@ nav {
     color: #EA580C
 }
 
+@media screen and (max-width: 768px) {
+    .adopt {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .adopt-card {
+        width: 100%;
+    }
+
+    .adopt-card img {
+        width: 100%;
+    }
+}
+
 /* END OF ADOPT */
 
 /* OUR SUCCESS */
@@ -284,7 +360,7 @@ nav {
 }
 
 .success-items-details-num {
-    color:#EA580C;
+    color: #EA580C;
     font-size: 3rem;
     line-height: 1;
     font-weight: 800;
@@ -294,3 +370,28 @@ nav {
     margin-top: 0.5rem;
     font-weight: 700;
 }
+
+@media screen and (max-width: 768px) {
+    .success {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .success-content-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .success-items {
+        gap: 2rem;
+    }
+
+    .success-heading-container-title {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+}
+
+/* END OF OUR SUCCESS */
