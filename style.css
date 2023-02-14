@@ -7,6 +7,10 @@
   font-family: 'Dosis';
 }
 
+html {
+  overflow-x: hidden;
+}
+
 /********************************************** COLOR **********************************************/
 :root {
   --primary-color: #e3712d;
@@ -17,6 +21,7 @@
   --gene-color: #bbbbbb;
 
   --placeholder-color: #e99461;
+  --ic-big-paw-color: #e0e0e0;
 
   --status-adopted-color: #fd6e6e;
   --status-available-color: #42d463;
@@ -186,11 +191,26 @@
 
 section.content {
   padding: 2.5rem;
+  position: relative;
 }
 
 section.content #ic_big_paw {
   position: absolute;
-  display: none;
+  background-color: var(--ic-big-paw-color);
+  opacity: 0.54;
+  z-index: -9999;
+}
+
+section.content #ic_big_paw:nth-child(1) {
+  transform: rotate(129.11deg);
+  top: 15%;
+  left: 0;
+}
+
+section.content #ic_big_paw:nth-child(2) {
+  transform: rotate(-54.6deg);
+  right: -3.5%;
+  bottom: 12%;
 }
 
 section.content .title {
@@ -316,14 +336,21 @@ section.content .search #ic_search {
 }
 
 section.content .container-grid {
+  position: relative;
+  z-index: 99;
   margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2.25rem 0;
-  justify-items: centergit;
+  justify-items: center;
+}
+
+@media screen and (max-width: 1175px) {
 }
 
 .container-grid .card {
+  position: relative;
+  z-index: 100;
   display: flex;
   gap: 0.8rem;
   flex-direction: column;
@@ -332,6 +359,7 @@ section.content .container-grid {
   width: 100%;
   padding: 13px 11px;
   border-radius: 18px;
+  background-color: white;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.09);
 }
 
