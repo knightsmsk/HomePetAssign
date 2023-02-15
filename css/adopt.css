@@ -1,90 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Dosis';
-}
-
-/********************************************** COLOR **********************************************/
-:root {
-  --primary-color: #e3712d;
-  --bg-color: #fae9d7;
-  --font-or-btn-color: #f18f1b;
-  --month-gender-gene-color: #c7c7c7;
-
-  --status-already-color: #fd6e6e;
-  --status-notyet-color: #42d463;
-}
-
-/********************************************** ICON **********************************************/
-
-#ic_pet_adopt {
-  width: 160px;
-  height: 160px;
-  background-color: black;
-  mask: url(../assets/icons/pet-adopt.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/pet-adopt.svg) no-repeat center/contain;
-}
-
-#ic_dog_cat {
-  width: 160px;
-  height: 160px;
-  background-color: black;
-  mask: url(../assets/icons/dog-cat.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/dog-cat.svg) no-repeat center/contain;
-}
-
-#ic_search {
-  width: 19px;
-  height: 19px;
-  background-color: black;
-  mask: url(../assets/icons/search.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/search.svg) no-repeat center/contain;
-}
-
-#ic_big_paw {
-  width: 197px;
-  height: 171px;
-  background-color: black;
-  mask: url(../assets/icons/big-paw.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/big-paw.svg) no-repeat center/contain;
-  -moz-mask: url(../assets/icons/big-paw.svg) no-repeat center/contain;
-}
-
-#ic_paw {
-  width: 9px;
-  height: 8px;
-  background-color: black;
-  mask: url(../assets/icons/paw.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/paw.svg) no-repeat center/contain;
-}
-
-#ic_down {
-  width: 8px;
-  height: 6px;
-  background-color: black;
-  mask: url(../assets/icons/down.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/down.svg) no-repeat center/contain;
-}
-
-#ic_bookmark {
-  width: 11px;
-  height: 17px;
-  background-color: black;
-  mask: url(../assets/icons/bookmark.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/bookmark.svg) no-repeat center/contain;
-}
-
-#ic_filter {
-  width: 35px;
-  height: 25px;
-  background-color: white;
-  mask: url(../assets/icons/filter.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/filter.svg) no-repeat center/contain;
-}
-
 .size12 {
   font-size: 12px;
 }
@@ -118,6 +31,13 @@ a {
   margin: 20px;
 }
 
+@media screen and (max-width: 877px) {
+  section.content.active {
+    margin-top: 6rem;
+    transition: all 400ms ease;
+  }
+}
+
 .pawHead {
   display: flex;
   flex-direction: row;
@@ -125,7 +45,7 @@ a {
   gap: 10px;
 }
 
-#ic_paw {
+.pawHead #ic_paw {
   margin: auto 0px;
   width: 32px;
   height: 32px;
@@ -301,10 +221,15 @@ img {
   color: #c7c7c7;
 }
 
+.orange {
+  color: #f18f1b;
+}
+
 .borderOrange {
   border: 2px solid #f18f1b;
   border-radius: 20px;
   padding: 5px 10px;
+
   background-color: white;
 }
 
@@ -360,8 +285,8 @@ img {
   flex-direction: row;
   justify-content: space-between;
   position: absolute;
-  max-width: 1500px;
   width: 100%;
+  top: 0;
   pointer-events: none;
 }
 

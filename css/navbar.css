@@ -1,3 +1,15 @@
+.container {
+  position: relative;
+  max-width: 1420px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+section.content {
+  transition: all 400ms ease;
+  transition-delay: 200ms;
+}
+
 .navbar {
   position: relative;
   display: flex;
@@ -178,10 +190,6 @@
     background-color: white;
     transition: 0.5s ease;
   }
-  section.content.active {
-    margin-top: 3rem;
-    transition: all 400ms ease;
-  }
 }
 
 @media screen and (max-width: 550px) {
@@ -200,7 +208,7 @@
   }
 
   .navbar .left h1 {
-    flex: 1.5;
+    flex-basis: 60%;
     text-align: center;
   }
   .navbar .mid {
@@ -252,9 +260,20 @@
   }
 }
 
+@media screen and (max-width: 375px) {
+  .navbar .left h1 {
+    flex-basis: 50%g;
+  }
+}
+
 @media screen and (max-width: 340px) {
   .navbar .mid {
     left: calc(50% - 16vh);
   }
 }
 
+@media screen and (max-width: 320px) {
+  .navbar .left h1 {
+    flex-basis: 0;
+  }
+}

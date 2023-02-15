@@ -1,127 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Dosis';
-}
-
-html {
-  overflow-x: hidden;
-}
-
-/********************************************** COLOR **********************************************/
-:root {
-  --primary-color: #e3712d;
-  --bg-color: #fff3e5;
-  --hover-bg-menu-color: #ffe7ce;
-  --font-or-btn-color: #f18f1b;
-  --dropdown-ic-color: #f38543;
-  --month-gender-color: #c7c7c7;
-  --gene-color: #bbbbbb;
-
-  --placeholder-color: #e99461;
-  --ic-big-paw-color: #e0e0e0;
-
-  --status-adopted-color: #fd6e6e;
-  --status-available-color: #42d463;
-}
-
-/********************************************** ICON **********************************************/
-
-#ic_hamburger {
-  width: 28px;
-  height: 24px;
-
-  background-color: var(--font-or-btn-color);
-  mask: url(../assets/icons/hamburger.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/hamburger.svg) no-repeat center/contain;
-}
-#ic_all {
-  width: 23px;
-  height: 14px;
-  background-color: white;
-  mask: url(../assets/icons/all.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/all.svg) no-repeat center/contain;
-}
-
-#ic_pet_adopt {
-  width: 160px;
-  height: 160px;
-  background-color: black;
-  mask: url(../assets/icons/pet-adopt.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/pet-adopt.svg) no-repeat center/contain;
-}
-
-#ic_dog_cat {
-  width: 160px;
-  height: 160px;
-  background-color: black;
-  mask: url(../assets/icons/dog-cat.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/dog-cat.svg) no-repeat center/contain;
-}
-
-#ic_search {
-  width: 24px;
-  height: 20px;
-  background-color: black;
-  mask: url(../assets/icons/search.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/search.svg) no-repeat center/contain;
-}
-
-#ic_big_paw {
-  width: 197px;
-  height: 171px;
-  background-color: black;
-  mask: url(../assets/icons/big-paw.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/big-paw.svg) no-repeat center/contain;
-}
-
-#ic_paw {
-  width: 9px;
-  height: 8px;
-  background-color: black;
-  mask: url(../assets/icons/paw.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/paw.svg) no-repeat center/contain;
-}
-
-#ic_down {
-  width: 12px;
-  height: 12px;
-  background-color: black;
-  mask: url(../assets/icons/down.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/down.svg) no-repeat center/contain;
-}
-
-#ic_bookmark {
-  width: 12px;
-  height: 18px;
-  background-color: black;
-  mask: url(../assets/icons/bookmark.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/bookmark.svg) no-repeat center/contain;
-}
-
-#ic_clear {
-  width: 25px;
-  height: 24px;
-  background-color: var(--primary-color);
-  mask: url(../assets/icons/clear.svg) no-repeat center/contain;
-  -webkit-mask: url(../assets/icons/clear.svg) no-repeat center/contain;
-}
-.container {
-  max-width: 1420px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 /********************************************** NAVBAR **********************************************/
+
 
 section.content {
   padding: 2.5rem;
   position: relative;
-  transition: all 400ms ease;
-  transition-delay: 200ms;
 }
 
 section.content #ic_big_paw {
@@ -291,6 +173,11 @@ section.content .container-grid {
 @media screen and (max-width: 877px) {
   section.content .container-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  section.content.active {
+    margin-top: 3rem;
+    transition: all 400ms ease;
   }
 }
 

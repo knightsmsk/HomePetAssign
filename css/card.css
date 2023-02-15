@@ -1,3 +1,12 @@
+.container-grid {
+  position: relative;
+  z-index: 99;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
 .container-grid .card {
   position: relative;
   z-index: 100;
