@@ -1,0 +1,137 @@
+.container-grid .card {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+  max-width: 262.52px;
+  max-height: 340px;
+  width: 100%;
+  padding: 13px 11px;
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.09);
+}
+
+.container-grid .card .img {
+  position: relative;
+}
+
+.container-grid .card .img .container-bookmark {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.container-grid .card .img .container-bookmark .bookmark {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.container-grid .card .img .container-bookmark .bookmark .bg-bookmark {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  filter: blur(1px);
+  -webkit-filter: blur(0.1px);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.container-grid .card .img .container-bookmark #ic_bookmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.container-grid .card .img img {
+  width: 100%;
+  object-fit: cover;
+  height: 185.52px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.container-grid .card .info_status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-grid .card .info_status .info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--month-gender-color);
+}
+
+.container-grid .card .info_status .info span:not([class='line']) {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.container-grid .card .info_status .info .line {
+  display: inline-block;
+  border-radius: 0.063rem;
+  width: 0.125rem;
+  height: 0.875rem;
+  background-color: var(--month-gender-color);
+}
+
+.container-grid .card .info_status .status {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.865rem;
+}
+
+.container-grid .card .info_status .status.adopted {
+  color: var(--status-adopted-color);
+}
+
+.container-grid .card .info_status .status.available {
+  color: var(--status-available-color);
+}
+
+.container-grid .card .name_gene {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-grid .card .name_gene #name {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.container-grid .card .name_gene #gene::first-letter {
+  text-transform: capitalize;
+}
+
+.container-grid .card .name_gene #gene {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gene-color);
+}
+
+.container-grid .card .read-more button {
+  padding: 0.3rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  border-radius: 99px;
+  border: 2px solid var(--font-or-btn-color);
+  font-weight: 600;
+  color: var(--font-or-btn-color);
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.container-grid .card .read-more button:hover {
+  color: white;
+  background-color: var(--font-or-btn-color);
+  transition: 0.3s ease;
+}
