@@ -492,4 +492,10 @@ nav {
     border: 2px solid #EA580C;
 }
 
+@media screen and (max-width: 768px) {
+    .contact-content-name-email {
+        flex-direction: column;
+    }
+}
+
 /* END OF CONTACT US */
