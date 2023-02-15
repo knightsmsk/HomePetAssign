@@ -262,7 +262,7 @@ section.content {
 
 @media screen and (max-width: 375px) {
   .navbar .left h1 {
-    flex-basis: 50%g;
+    flex-basis: 50%;
   }
 }
 
