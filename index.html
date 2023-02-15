@@ -18,36 +18,48 @@
         </div>
         <div class="page-name" data-page="Bookmark"></div>
 
-        <div class="mid">
+        <div class="mid hidden">
           <ul class="menu">
             <li>
               <a href="/">
+                <p id="ic_paw"></p>
                 <p>home</p>
-                <p id="ic_paw"></p>
               </a>
             </li>
             <li>
               <a href="#">
+                <p id="ic_paw"></p>
                 <p>adopt</p>
-                <p id="ic_paw"></p>
               </a>
             </li>
             <li>
               <a href="#">
-                <p>lost pets</p>
                 <p id="ic_paw"></p>
+                <p>lost pets</p>
               </a>
             </li>
             <li class="active">
               <a href="#">
-                <p>bookmark</p>
                 <p class="active" id="ic_paw"></p>
+                <p>bookmark</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <p>contact</p>
                 <p id="ic_paw"></p>
+                <p>contact</p>
+              </a>
+            </li>
+            <li class="sign">
+              <a href="#">
+                <p id="ic_paw"></p>
+                <p>Sign in</p>
+              </a>
+            </li>
+            <li class="sign">
+              <a href="#">
+                <p id="ic_paw"></p>
+                <p>Create a new account</p>
               </a>
             </li>
           </ul>
@@ -78,7 +90,7 @@
               <div class="line"></div>
             </div>
             <div class="input-field">
-              <input type="text" placeholder="Search..." />
+              <input type="text" placeholder="Search your lovely pet..." />
             </div>
             <span id="ic_clear"></span>
             <span id="ic_search"></span>
@@ -139,7 +151,7 @@
           </div>
           <div class="card">
             <div class="img">
-              <img src="/assets/imgs/dog/boo.jpeg" alt="" />
+              <img src="/assets/imgs/dog/boo.jpg" alt="" />
               <div class="container-bookmark">
                 <div class="bookmark">
                   <p id="ic_bookmark"></p>
@@ -302,21 +314,37 @@
       const ic_clear = document.querySelector('.search #ic_clear');
       const paw = document.querySelector('#ic_paw.active');
       const menu = document.querySelectorAll('.menu li');
+      const section = document.querySelector('section.content');
       const hamburger = document.querySelector('.hamburger-menu');
+      const menuList = document.querySelector('.navbar .mid');
 
       hamburger.addEventListener('click', () => {
-        const menuList = document.querySelector('.navbar .mid .menu');
-        menuList.classList.toggle('active');
+        menuList.classList.toggle('hidden');
+        section.classList.toggle('active');
+
+        if (!menuList.classList.contains('hidden'))
+          setTimeout(() => {
+            menuList.classList.add('hidden');
+            section.classList.remove('active');
+          }, 5000);
       });
 
       menu.forEach((item) => {
         item.addEventListener('mouseover', (e) => {
-          paw.classList.remove('active');
-          e.currentTarget.children[0].children[1].classList.add('active');
+          if (
+            !e.currentTarget.children[0].children[0].classList.contains(
+              'active'
+            )
+          ) {
+            paw.classList.remove('active');
+            e.currentTarget.children[0].children[0].classList.add('active');
+          }
         });
         item.addEventListener('mouseout', (e) => {
-          paw.classList.add('active');
-          e.currentTarget.children[0].children[1].classList.remove('active');
+          if (!paw.classList.contains('active')) {
+            paw.classList.add('active');
+            e.currentTarget.children[0].children[0].classList.remove('active');
+          }
         });
       });
 
